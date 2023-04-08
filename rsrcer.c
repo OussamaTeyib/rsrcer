@@ -1,4 +1,4 @@
-// convert a resource file into a char arry.
+// convert a resource file into a C source file arry.
 
 #include <stdio.h>
 
