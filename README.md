@@ -4,8 +4,8 @@ rsrcer is a small command-line utility that converts a resource file into a C ar
 ## Usage
 The program takes three arguments:
 
-'''
-rsrcer input_file output_file array_name '''
+```
+rsrcer input_file output_file array_name ```
 
 - input_file: the path to the input binary file to be converted. 
 - output_file: the path to the output C source file to be generated.
@@ -13,8 +13,8 @@ rsrcer input_file output_file array_name '''
 
 ### Example usage:
 
-'''
-binary2c mydata.bin data.c mydata '''
+```
+binary2c mydata.bin data.c mydata ```
 
 This will create a C source file data.c that defines a const unsigned char mydata[] array containing the bytes of the mydata.bin file.
 
@@ -25,4 +25,4 @@ This will create a C source file data.c that defines a const unsigned char mydat
 - Reports errors and usage messages to stderr for convenience.
 
 ## Credits
-This program was written by * Oussama Teyib *.
+This program was written by **Oussama Teyib**.
