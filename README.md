@@ -15,7 +15,7 @@ rsrcer input_file output_file array_name
 ### Example usage:
 
 ```
-binary2c mydata.bin data.c mydata 
+rsrcer mydata.bin data.c mydata 
 ```
 
 This will create a C source file `data.c` that defines a `const unsigned char mydata[]` array containing the bytes of the `mydata.bin` file.
