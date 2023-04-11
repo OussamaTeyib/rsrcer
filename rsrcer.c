@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
             fprintf(output, "\n%*c", 8, ' ');
  
         fprintf(output, "0x%02X", byte);
-        if (count < size - 1) // -1 to avoid the last byte
+        if (count < size - 1) // '-1' to avoid the last byte
             fprintf(output, ", ");
         count++;
     }
