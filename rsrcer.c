@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     fprintf(output, "const unsigned char %s[] = {", argv[3]); 
     while (1 == fread(&byte, 1, 1, input))
     {
-        // impore the readability of output file
+        // impovre the readability of output file
         if (!(count % 16))
             fprintf(output, "\n%*c", 8, ' ');
  
