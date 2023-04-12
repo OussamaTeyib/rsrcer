@@ -1,4 +1,4 @@
-// Convert a resource file into a C source file array.
+// Convert a resource file into a C array.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 4)
     {
-        fprintf(stderr, "Invalid number of parametres!\n");
+        fprintf(stderr, "Invalid number of arguments!\n");
         fprintf(stderr, "Usage: rsrcer <input_file> <output_file> <array_name>");
         return EXIT_FAILURE;
     } 
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     fprintf(output, "const unsigned char %s[] = {", argv[3]); 
     while (1 == fread(&byte, 1, 1, input))
     {
-        // impovre the readability of output file
+        // improve the readability of the output file
         if (!(count % 16))
             fprintf(output, "\n%*c", 8, ' ');
  
