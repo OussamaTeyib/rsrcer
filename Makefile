@@ -9,7 +9,7 @@ $(BIN_DIR)/rsrcer: $(SRC_DIR)/rsrcer.c
 	@mkdir -p bin
 	@$(CC) $(CFLAGS) -o $(BIN_DIR)/rsrcer $(SRC_DIR)/rsrcer.c
 
-.PHONY: zip push clean
+.PHONY: zip push release clean
 
 # zip the release
 zip:
