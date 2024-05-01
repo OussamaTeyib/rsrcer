@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
     FILE* output = fopen(argv[2], "w");
     if(!output)
     {
-        fprintf(stderr, "ERROR: cannot create output file!\n");
+        fprintf(stderr, "ERROR: can't create output file!\n");
         fclose(input);
         return EXIT_FAILURE;
     }   
