@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     FILE* input = fopen(argv[1], "rb");
     if (!input)
     {
-        fprintf(stderr, "ERROR: cannot open the file!\n");
+        fprintf(stderr, "ERROR: can't open input file!\n");
         return EXIT_FAILURE;
     }
        
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
     FILE* output = fopen(argv[2], "w");
     if(!output)
     {
-        fprintf(stderr, "ERROR: cannot create a file!\n");
+        fprintf(stderr, "ERROR: cannot create output file!\n");
         fclose(input);
         return EXIT_FAILURE;
     }   
@@ -37,12 +37,8 @@ int main(int argc, char* argv[])
     fprintf(output, "const unsigned char %s[] = {", argv[3]); 
     while (1 == fread(&byte, 1, 1, input))
     {
-        // improve the readability of the output file
-        if (!(count % 16))
-            fprintf(output, "\n%*c", 8, ' ');
- 
         fprintf(output, "0x%02X", byte);
-        if (count < size - 1) // '-1' to avoid the last byte
+        if (count < (size_t) (size - 1)) // '-1' to avoid the last byte
             fprintf(output, ", ");
         count++;
     }
