@@ -1,6 +1,11 @@
 ## rsrcer
 rsrcer is a command-line utility that converts a resource file into a C array that can be used in a C source code file.
 
+### Installation:
+1. Download the latest release from [Releases](https://github.com/OussamaTeyib/rsrcer/releases) page.
+2. Add `bin` directory to your system's environment variables.
+2. Run the executable.
+
 ### Usage:
 The program takes three arguments:
 ```
