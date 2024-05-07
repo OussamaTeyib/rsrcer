@@ -30,5 +30,5 @@ release:
 	@gh release upload $(ver) $(RELEASE_DIR)/rsrcer-$(ver).zip
 
 # remove all .exe
-clear:
+clean:
 	@rm -r bin
